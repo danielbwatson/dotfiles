@@ -1,0 +1,58 @@
+[user]
+	name = Daniel Watson
+	email = dbwatson@vectorspace.org
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = auto
+
+[alias]
+	st = status --short
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
+	who = shortlog -s --
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  unstage = reset HEAD
+  # pretty ascii graph log format
+  l = log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset\
+          %s %Cblue[%an]%Creset %Cgreen(%cr)%Creset'\
+          --abbrev-commit --date=relative
+  # pretty log with all branches
+  la = !git l --all
+  # really useful for high level picture
+  ld = !git l --all --simplify-by-decoration
+  # all commits unreachable via branch, tag, or child commit
+  # ignores anything pointed to by the reflog 
+  # so it displays all commits in jeopardy of garbage collection
+  loose-commits = !"for SHA in $(git fsck --unreachable\
+                  --no-reflogs | grep commit |\
+                  cut -d\\  -f 3); do git log -n 1 $SHA; done"
+
+[push]
+	default = tracking
+
+[branch]
+	autosetuprebase = always
+
+[diff]
+	tool = diffmerge
+	renameLimit = 999999
+
+[merge]
+	tool = kdiff3
+	renameLimit = 999999
+
+[mergetool]
+	keepBackup = false
+
+[rerere]
+	enabled = true
+
+[include]
+  path = ~/.gitconfig_local

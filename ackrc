@@ -1,0 +1,11 @@
+--ignore-dir=.idea/
+--ignore-dir=out/
+--ignore-dir=target/
+--ignore-dir=test-output/
+
+--type-set
+groovy=.groovy
+
+--type-add
+jsp=.tag,.gsp
+
