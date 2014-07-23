@@ -1,2 +1,0 @@
-# Copy files that will also be used by Windows programs that can't follow Cygwin symlinks (for example GVIM)
-COPY_ALWAYS="vimrc vimrc.bundles"
