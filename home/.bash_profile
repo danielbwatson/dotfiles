@@ -2,8 +2,9 @@
 
 [ -z "$PS1" ] && return # If not running interactively, don't do anything
 
-[ -x lesspipe ] && eval "$(lesspipe)" # Make less work with non-text files see lesspipe
-[ -x lesspipe.sh ] && eval "$(lesspipe.sh)" # Make less work with non-text files see lesspipe
+[ -x /usr/local/bin/lesspipe ] && eval "$(/usr/local/bin/lesspipe)" # Make less work with non-text files see lesspipe
+[ -x /usr/local/bin/lesspipe.sh ] && eval "$(/usr/local/bin/lesspipe.sh)" # Make less work with non-text files see lesspipe
+[ -x /usr/local/bin/gdircolors ] && alias dircolors="/usr/local/bin/gdircolors" # Import dircolors on the mac
 
 export BASH_IT=$HOME/.bash_it # Path to the bash it configuration
 export BASH_IT_THEME='bobby'
@@ -15,6 +16,8 @@ export PAGER='less -Xq'
 export PATH=~/bin:~/code/stash/NEBULA/wrapper:/usr/local/bin:$PATH:/usr/local/sbin
 export VISUAL='vim'
 export PYTHONSTARTUP=~/.pystartup
+
+eval `dircolors ~/.dircolors-solarized/dircolors.256dark`
 
 unset MAILCHECK # Don't check mail when opening terminal.
 
