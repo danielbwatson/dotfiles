@@ -26,6 +26,9 @@ Bundle 'tpope/vim-fugitive'
 " EasyMotion support
 Bundle 'Lokaltog/vim-easymotion'
 
+" Solarized
+Bundle 'altercation/vim-colors-solarized'
+
 Bundle 'ddollar/nerdcommenter'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'msanders/snipmate.vim'
