@@ -4,9 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
 " Sets sensible defaults
 Bundle 'tpope/vim-sensible'
 
@@ -28,5 +25,14 @@ Bundle 'tpope/vim-fugitive'
 
 " EasyMotion support
 Bundle 'Lokaltog/vim-easymotion'
+
+Bundle 'ddollar/nerdcommenter'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'msanders/snipmate.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'mattn/zencoding-vim'
+Bundle 'bling/vim-airline'
 
 filetype on

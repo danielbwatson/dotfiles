@@ -2,9 +2,31 @@ let mapleader = ","
 
 set nocompatible  " be iMproved
 
+set title "show the file editing stuff in the console title
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+
+" tabs
+map <leader>n :tabnew<CR>
+
+set undodir=~/tmp/vim_undo//
+set backupdir=~/tmp/vim_backup//
+set directory=~/tmp/vim_swp//
+
+"omni-completion
+filetype on
+filetype plugin on
+filetype plugin indent on
+filetype indent on
+set ofu=syntaxcomplete#Complete
+
+"move on splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 augroup vimrcEx
   autocmd!
