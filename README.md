@@ -15,3 +15,14 @@ homeshick link
 
 ./.homesick/repos/dotfiles/setup_system.sh home or work
 ```
+
+# homebrew
+
+```sh
+brew tap homebrew/versions
+
+for i in ack cassandra12 git kdiff3 lesspipe python reattach-to-user-namespace tmux vim; do
+    brew install $i
+done
+```
+
