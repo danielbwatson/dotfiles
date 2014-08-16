@@ -19,9 +19,9 @@ homeshick link
 # homebrew
 
 ```sh
-brew tap homebrew/versions caskroom/cask caskroom/fonts caskroom/versions
+brew tap homebrew/versions homebrew/completions caskroom/cask caskroom/fonts caskroom/versions
 
-for i in ack brew-cask cassandra12 coreutils git lesspipe python reattach-to-user-namespace tmux vim; do
+for i in ack bash-completion brew-cask cassandra12 coreutils git lesspipe pip-completion python reattach-to-user-namespace tmux vim; do
     brew install $i
 done
 
