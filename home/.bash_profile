@@ -40,6 +40,10 @@ source $BASH_IT/bash_it.sh # Load bash-it
 source "$HOME/.homesick/repos/homeshick/homeshick.sh" # Load homeshick
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash" # Load homeshick
 
+if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
+fi
+
 alias vi="vim"
 alias ql="qlmanage -p 2>/dev/null"
 

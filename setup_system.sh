@@ -29,11 +29,8 @@ for i in base dirs docker extract fasd git java osx pyenv python ssh tmux vagran
   bash-it enable plugin $i
 done
 
-echo "setup bash-it completion"
+# Use homebrew completion instead
 bash-it disable completion all
-for i in bash-it brew defaults git pip ssh tmux; do
-  bash-it enable completion $i
-done
 
 # Update vim bundles
 vim -u $HOME/.vimrc.bundles +BundleInstall +qa
