@@ -8,7 +8,7 @@
 [ -x /usr/bin/mdfind ] && alias locate="/usr/bin/mdfind" # Import dircolors on the mac
 
 export BASH_IT=$HOME/.bash_it # Path to the bash it configuration
-export BASH_IT_THEME='bobby'
+export BASH_IT_THEME='powerline'
 export EDITOR='vim'
 export HISTCONTROL=ignoreboth # Ignore lines starting with spaces and duplicates in the history file
 export HISTIGNORE="fg:exit:clear:history" # Ignore these commands in history
@@ -44,10 +44,29 @@ if [ -f /usr/local/etc/bash_completion ]; then
     source /usr/local/etc/bash_completion
 fi
 
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 alias vi="vim"
 alias ql="qlmanage -p 2>/dev/null"
+alias xmltidy="tidy -i -xml -m -q"
 
-function link_gradle() {
+# setjdk from http://www.jayway.com/2014/01/15/how-to-switch-jdk-version-on-mac-os-x-maverick/
+function setjdk() {
+    if [ $# -ne 0 ]; then
+        removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+        if [ -n "${JAVA_HOME+x}" ]; then
+            removeFromPath $JAVA_HOME
+        fi
+        export JAVA_HOME=`/usr/libexec/java_home -v $@`
+        export PATH=$JAVA_HOME/bin:$PATH
+    fi
+}
+
+function removeFromPath() {
+    export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+}
+
+function link-gradle() {
   # Wrapper script
   ln -s $HOME/code/stash/NEBULA/wrapper/gradlew gradlew
   # Directory

@@ -19,7 +19,7 @@ esac
 
 echo "setup bash-it aliases"
 bash-it disable alias all
-for i in general git homebrew osx vagrant vim; do
+for i in general git homebrew osx vagrant; do
   bash-it enable alias $i
 done
 

@@ -34,6 +34,9 @@
                   --no-reflogs | grep commit |\
                   cut -d\\  -f 3); do git log -n 1 $SHA; done"
 
+  # Creates a branch for a pull request from stash
+  prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:pull_request_$2; } ; f"
+
 [push]
 	default = tracking
 
