@@ -1,39 +1,43 @@
 dotfiles
 ========
 
-Requires homeshick (https://github.com/andsens/homeshick)
-
-```sh
-git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
-#homeshick clone git@github.com:danielbwatson/dotfiles.git
-homeshick clone https://github.com/danielbwatson/dotfiles.git
-
-homeshick link
-
-./.homesick/repos/dotfiles/setup_system.sh home or work
-```
-
 # homebrew
 
 ```sh
-brew tap homebrew/versions homebrew/completions caskroom/cask caskroom/fonts caskroom/versions
+brew tap homebrew/versions homebrew/completions
 
-for i in ack bash-completion brew-cask cassandra12 coreutils git lesspipe pip-completion python reattach-to-user-namespace tmux vim; do
-    brew install $i
-done
-
-for i in alfred font-sauce-code-powerline gitx-rowanj google-chrome hipchat intellij-idea iterm2 kdiff3 p4merge spotify spotify-notifications vagrant virtualbox; do
-    brew cask install $i
-done
+brew install aspell --with-lang-en
+brew install bash-completion
+brew install bash-git-prompt
+brew install coreutils
+brew install dos2unix
+brew install fig
+brew install git
+brew install groovy
+brew install homebrew/completions/boot2docker-completion
+brew install homebrew/completions/pip-completion
+brew install jq
+brew install lesspipe
+brew install maven
+brew install mysql
+brew install python
+brew install the_silver_searcher
 ```
+
+# Apps
+Alfred
+Dash
+Dropbox
+Emacs
+GitX - rowanj fork
+Google Chrome
+Google Drive
+HipChat
+Intellij IDEA (with bundled jdk)
+Skitch
+Spotify
 
 # Fonts
 
-Source Code Pro 14pt
-https://github.com/Lokaltog/powerline-fonts
-
-Solarized iTerm2
-https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+Source Code Pro 13pt
+https://github.com/adobe-fonts/source-code-pro

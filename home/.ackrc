@@ -1,8 +1,0 @@
---ignore-dir=is:.idea
---ignore-dir=is:out
---ignore-dir=is:target
---ignore-dir=is:test-output
-
---type-set=pig:ext:pig
-
---type-add=jsp:ext:tag,gsp
